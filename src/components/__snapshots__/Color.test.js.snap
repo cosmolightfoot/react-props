@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Color snapshot test renders a color 1`] = `
+<dl>
+  <dt>
+    Name
+  </dt>
+  <dd>
+    black
+    <div
+      style={
+        Object {
+          "backgroundColor": "#000000",
+          "display": "inline-block",
+          "height": "0.8em",
+          "width": "0.8em",
+        }
+      }
+    />
+  </dd>
+  <dt>
+    Hex
+  </dt>
+  <dd>
+    #000000
+  </dd>
+  <dt>
+    Red
+  </dt>
+  <dd>
+    <p>
+      Red - 
+      0
+    </p>
+    <p>
+      Green - 
+      0
+    </p>
+    <p>
+      Blue - 
+      0
+    </p>
+  </dd>
+</dl>
+`;
