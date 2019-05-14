@@ -1,14 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const colorStyle = {
-  display: 'inline-block',
-  backgroundColor: hex,
-  width: '0.8em',
-  height: '0.8em'
+
+const hexFromColor = color => {
+  return `${color.toString(16).padStart(2, 0)}`.toUpperCase();
 };
 
-export default function Colors({ name, hex, rbg }) {
+const hexFromRGB = (rgb) => {
+  return `#${hexFromColor(rgb.red)}${hexFromColor(rgb.green)}${hexFromColor(rgb.blue)}`;
+};
+
+export default function Colors({ name, rgb }) {
+
+  const hex = hexFromRGB(rgb);
+
+  const colorStyle = {
+    display: 'inline-block',
+    backgroundColor: hex,
+    width: '0.8em',
+    height: '0.8em'
+  };
+
   return (
     <dl>
       <dt>Name</dt>
@@ -19,9 +31,9 @@ export default function Colors({ name, hex, rbg }) {
 
       <dt>Red</dt>
       <dd>
-        <p>Red - {rbg.red}</p>
-        <p>Green - {rbg.green}</p>
-        <p>Blue - {rbg.blue}</p>
+        <p>Red - {rgb.red}</p>
+        <p>Green - {rgb.green}</p>
+        <p>Blue - {rgb.blue}</p>
       </dd>
     </dl>
   );
