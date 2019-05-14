@@ -12,7 +12,7 @@ export default function Colors({ name, hex, rbg }) {
   return (
     <dl>
       <dt>Name</dt>
-      <dd>{name || hex}</dd>
+      <dd>{name || hex}<div style={colorStyle}></div></dd>
 
       <dt>Hex</dt>
       <dd>{hex}</dd>
@@ -26,12 +26,13 @@ export default function Colors({ name, hex, rbg }) {
     </dl>
   );
 }
-
-Colors.PropTypes = {
+Colors.propTypes = {
   name: PropTypes.string,
+  hex: PropTypes.string.isRequired,
   rgb: PropTypes.shape({
     red: PropTypes.number.isRequired,
     green: PropTypes.number.isRequired,
     blue: PropTypes.number.isRequired
   })
 };
+
